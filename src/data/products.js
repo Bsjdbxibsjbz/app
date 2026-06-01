@@ -4,14 +4,12 @@ export const products = [
     name: 'Chicken Sheekh Kabab',
     category: 'Ready to Cook',
     subcategory: 'Chicken Sheekh Kabab',
-    price: 249, // Default price
+    price: 249,
     originalPrice: 299,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 249,
-      '1kg': 479  // Bulk price
-    },
+    priceByWeight: { '500g': 249, '1kg': 498 },
+    originalPriceByWeight: { '500g': 299, '1kg': 598 },
     serves: '3-4',
     calories: '320 kcal',
     spiceLevel: 'medium',
@@ -31,10 +29,8 @@ export const products = [
     originalPrice: 349,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 299,
-      '1kg': 579
-    },
+    priceByWeight: { '500g': 299, '1kg': 598 },
+    originalPriceByWeight: { '500g': 349, '1kg': 698 },
     serves: '2-3',
     calories: '410 kcal',
     spiceLevel: 'hot',
@@ -53,10 +49,9 @@ export const products = [
     price: 229,
     originalPrice: 269,
     weight: '500g',
-    weightOptions: ['500g'], // Only one option
-    prices: {
-      '500g': 229
-    },
+    weightOptions: ['500g'],
+    priceByWeight: { '500g': 229 },
+    originalPriceByWeight: { '500g': 269 },
     serves: '2-3',
     calories: '380 kcal',
     spiceLevel: 'mild',
@@ -76,10 +71,8 @@ export const products = [
     originalPrice: null,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 189,
-      '1kg': 359
-    },
+    priceByWeight: { '500g': 189, '1kg': 378 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
     serves: '3-4',
     calories: '290 kcal',
     spiceLevel: null,
@@ -99,10 +92,8 @@ export const products = [
     originalPrice: 289,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 259,
-      '1kg': 499
-    },
+    priceByWeight: { '500g': 259, '1kg': 518 },
+    originalPriceByWeight: { '500g': 289, '1kg': 578 },
     serves: '3-4',
     calories: '270 kcal',
     spiceLevel: null,
@@ -122,10 +113,8 @@ export const products = [
     originalPrice: 319,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 279,
-      '1kg': 539
-    },
+    priceByWeight: { '500g': 279, '1kg': 558 },
+    originalPriceByWeight: { '500g': 319, '1kg': 638 },
     serves: '3-4',
     calories: '165 kcal',
     spiceLevel: null,
@@ -145,10 +134,8 @@ export const products = [
     originalPrice: null,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 219,
-      '1kg': 419
-    },
+    priceByWeight: { '500g': 219, '1kg': 438 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
     serves: '3-4',
     calories: '310 kcal',
     spiceLevel: null,
@@ -164,16 +151,14 @@ export const products = [
     name: 'Whole Chicken',
     category: 'Chicken',
     subcategory: 'Whole Chicken',
-    price: 800, // Default price for 1kg
+    price: 400,
     originalPrice: null,
-    weight: '1kg',
+    weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 400,
-      '1kg': 800
-    },
+    priceByWeight: { '500g': 400, '1kg': 800 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
     serves: '3-4',
-    calories: '1400 kcal',
+    calories: '700 kcal',
     spiceLevel: null,
     badge: 'Fresh',
     image: 'https://images.unsplash.com/photo-1587593810167-a84920ea0781?w=800&q=85',
@@ -191,11 +176,9 @@ export const products = [
     originalPrice: null,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 249,
-      '1kg': 479
-    },
-    pieces: 5,
+    priceByWeight: { '500g': 249, '1kg': 498 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
+    serves: '2-3',
     calories: '250 kcal',
     spiceLevel: null,
     badge: 'Fresh',
@@ -214,10 +197,8 @@ export const products = [
     originalPrice: null,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 249,
-      '1kg': 479
-    },
+    priceByWeight: { '500g': 249, '1kg': 498 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
     serves: '3-4',
     calories: '280 kcal',
     spiceLevel: null,
@@ -237,10 +218,8 @@ export const products = [
     originalPrice: null,
     weight: '500g',
     weightOptions: ['500g', '1kg'],
-    prices: {
-      '500g': 229,
-      '1kg': 439
-    },
+    priceByWeight: { '500g': 229, '1kg': 458 },
+    originalPriceByWeight: { '500g': null, '1kg': null },
     serves: '4-5',
     calories: '300 kcal',
     spiceLevel: null,
@@ -257,7 +236,7 @@ export const categories = [
   {
     id: 'chicken',
     name: 'Chicken',
-    icon: '',
+    icon: '🍗',
     image: 'https://images.unsplash.com/photo-1604908177605-d405ea6ede37?w=600&q=85',
     subcategories: ['Curry Cuts', 'Boneless & Mince', 'Breast Only', 'Leg Pieces', 'Whole Chicken', 'Chicken Wings', 'Chicken Thighs', 'Chicken Drumsticks']
   },
